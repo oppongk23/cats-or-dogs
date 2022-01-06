@@ -9,7 +9,7 @@ The model is saved and deployed on a local server using Flask. The model state f
 
 The flask folder contains the "app.py" file which shows the steps followed in deploying the model. 
 
-More information can be found in the [https://pytorch.org/tutorials/recipes/deployment_with_flask.html](Pytorch documentation) 
+More information can be found in the [Pytorch documentation](https://pytorch.org/tutorials/recipes/deployment_with_flask.html) 
 
 The two test images which were used to test the deployed model were downloaded from:
 
