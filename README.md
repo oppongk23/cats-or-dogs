@@ -7,7 +7,9 @@ The notebook "cats_or_dogs.ipynb" outlines the entire training and validation pr
 
 The model is saved and deployed on a local server using Flask. The model state file, has been excluded from the repo due to its large size. 
 
-The flask folder contains the "app.py" file which shows the steps followed in deploying the model.
+The flask folder contains the "app.py" file which shows the steps followed in deploying the model. 
+
+More information can be found in the [https://pytorch.org/tutorials/recipes/deployment_with_flask.html](Pytorch documentation) 
 
 The two test images which were used to test the deployed model were downloaded from:
 
