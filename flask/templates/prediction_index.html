@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" />
+
+
+<link href="../static/css/galleria.css" rel="stylesheet" type="text/css" media="screen"> 
+
+
+<script type="text/javascript" src="../static/js/jquery-1.2.6.min.js"></script> 
+<script type="text/javascript" src="..static/js/jquery.galleria.js"></script> 
+
+<style media="screen,projection" type="text/css">
+	
+	/* BEGIN DEMO STYLE */
+
+	.gallery li{width:80px;height:60px;border:3px double #111;margin: 0 2px;background:#000; float:left;}
+	.gallery {width:300px;}
+
+    </style>
+
+
+
+
+<title>Cats and Dogs</title>
+</head>
+
+<body>
+
+
+
+
+    <div class="clear">&nbsp;</div>
+
+<div class="container_12">
+        
+	</div>
+	<div class="grid_8">
+
+			<div id="main_image"></div>
+	</div>
+    </div>
+    <div class="clear">&nbsp;</div>
+    <div class="container_16">
+    <div class="grid_2">
+		<p>&nbsp;</p>
+	</div>
+    
+      <div class="grid_12" id="galleryInformation">
+		<h2>Cats and Dogs</h2>
+        <p>
+			A simple Image Classifier that knows the difference between your fav pets.. well mostly 😄
+		</p>
+        
+      
+		<p>
+			<form action="http://localhost:5000/", method="post", enctype="multipart/form-data">
+				<h2>Upload the Image Here:</h2> <input type="file" name="imagefile">
+		</p>
+
+		<p><input type="submit" value="Predict image"></p>
+	  </form>
+
+	<figure>
+		<img src="{{ user_image }}" height="280px" width="400px">
+		<figcaption> {{ prediction_text}}! </figcaption>	
+	</figure>
+		
+       
+        <div id="footer">Template from <a href="http://www.bryantsmith.com">bryantsmith.com</a></div>
+	</div>
+    
+        <div class="grid_2">
+		<p>&nbsp;</p>
+	</div>
+    </div>
+    
+</div>
+
+</body>
+</html>

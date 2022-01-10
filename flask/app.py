@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, url_for
 from flask_ngrok import run_with_ngrok
 import torch
 from torch._C import device
@@ -41,20 +41,26 @@ def get_prediction(image_path):
 def render_prediction(prediction):
     return labelDict[prediction]
 
+image_folder = os.path.join('static', 'images')
+app.config["UPLOAD_FOLDER"] = image_folder
+
 @app.route('/', methods=['GET'])
-def root():
-    return jsonify({'msg' : 'Try POSTing to the /predict endpoint with an RGB image attachment'})
+def home():
+    return render_template('index.html')
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     if request.method == 'POST':
-            file = request.files['file']
+            file = request.files['imagefile']
             if file is not None:
                 class_ID = get_prediction(file)
                 class_name = render_prediction(class_ID)
 
-                return jsonify({'class_id': class_ID, 'class_name': class_name})
+                pic = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+
+                return render_template('prediction_index.html', user_image=pic, prediction_text=' We have a {} '.format(class_name))
+            
 
 
 if __name__ == "__main__":

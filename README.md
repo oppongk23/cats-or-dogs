@@ -17,4 +17,6 @@ The two test images which were used to test the deployed model were downloaded f
 
 "https://www.hdnicewallpapers.com/Wallpaper-Download/Dog/Dog-Running-on-Grass-Image"
 
+I played around with a webpage template I found from [bryantsmith.com](http://www.bryantsmith.com) for the front-end interface.
+
 ***Libraries: Pytorch, Flask, Matplotlib***
